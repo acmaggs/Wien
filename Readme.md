@@ -6,7 +6,7 @@ arXiv preprint [arXiv:2405.05882](https://arxiv.org/abs/2405.05882)
 The conductivity of strong electrolytes increases under high electric fields, a nonlinear response known as the first Wien effect. Here, using molecular dynamics simulations we show that this nonlinear response is non-monotonic for moderately concentrated aqueous electrolytes. We attribute this unanticipated behavior to the fact that, under high electric fields, the permittivity of water decreases and becomes anisotropic. The permittivity tensor measured in the simulations can be reproduced by a model of water molecules as dipoles. We incorporate the resulting anisotropic interactions between the ions into a generalised Stochastic Density Field Theory and calculate ionic correlations as well as corrections to the Nernst-Einstein conductivity which are in good agreement with the numerical simulations.
 
 ## Gromacs files
-`npt.gro` is the input file for a concentration $c=0.0075$ M of NaCl obtained after the energy minimisation, followed by  nvt and npt equilibration for 200 ps.
+`npt.gro` is the input file for a concentration $c=0.075$ M of NaCl obtained after the energy minimisation, followed by  nvt and npt equilibration for 200 ps.
 
 `topol.top` and `topol.tpr` are the two associated topology files.
 
