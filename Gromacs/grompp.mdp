@@ -1,0 +1,41 @@
+; Running Parameters
+; ===================================================================
+integrator              = md
+nsteps                  = 20000000
+dt                      = 0.002           ; 2 fs
+
+; Output control
+; ===================================================================
+nstxout-compressed      = 1000
+electric-field-x = 0.01  0   0     0 ; V/nm
+
+; Constraints
+; ===================================================================
+constraint-algorithm    = LINCS
+constraints             = hbonds            ; standard spc/e: 3 lengths -> also angle fixed
+
+; neighbor searching
+; ===================================================================
+ns-type                 = grid
+cutoff-scheme           = verlet            ; standard cutoff scheme
+rcoulomb                = 0.9               ; distance for the Coulomb cut-off
+rvdw                    = 0.9               ; distance for the LJ or Buckingham cut-off
+
+; Electrostatics
+; ===================================================================
+coulombtype             = pme
+
+; VdW
+; ===================================================================
+vdw-type                = Cut-off
+vdw-modifier            = Potential-shift
+DispCorr                = no
+pbc                     = xyz               ; Periodic Boundary Conditions (yes/no)
+
+; Temperature Coupling
+; ===================================================================
+tcoupl                  = v-rescale
+tc_grps                 = system
+tau_t                   = .5
+ref_t                   = 300
+
